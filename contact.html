@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - Animal World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+        nav {
+      background-color: #001f3f;
+      padding: 15px 20px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      color: white;
+      font-size: 24px;
+      font: weight bold;;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 100px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      background-color: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+    }
+
+
+    /* ===== Reset & Base Styles ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefcf7;
+  color: #333;
+}
+
+/* ===== Contact Section ===== */
+.contact-container {
+  background-image: url(aarn-giri-eLC1Bd3PLu4-unsplash.jpg); /* Replace with real URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.contact-box {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.contact-box h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.contact-box p {
+  margin-bottom: 20px;
+}
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-box textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-box button {
+  background-color: #ffa500;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-box button:hover {
+  background-color: #e69500;
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 20px;
+  }
+
+  .contact-box h1 {
+    font-size: 2rem;
+  }
+
+  .contact-box p {
+    font-size: 1rem;
+  }
+
+  .contact-box button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-box {
+    padding: 15px;
+  }
+
+  .contact-box h1 {
+    font-size: 1.7rem;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-info {
+    font-size: 0.85rem;
+  }
+}
+.custom-footer {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Social Links */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #00ffd0;
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+  background: linear-gradient(135deg, #00ffd0, #0088ff);
+  color: black;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00ffd0;
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">ZooSite</div>
+
+      <div class="nav-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="animals.html">Animals</a>
+        <a href="planyourvisit.html">Plan Your Visit</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="contact-container">
+    <div class="overlay"></div>
+    <div class="contact-box">
+      <h1>Get in Touch 🐾</h1>
+      <p>We'd love to hear from you!</p>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <p>📧 Email: abdullah@gmail.com</p>
+        <p>📞 Phone: +123 456 7890</p>
+        <p>📍 Location: Wildlife Sanctuary, Earth</p>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="custom-footer">
+    <div class="footer-socials">
+      <a href="https://facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+    </div>
+    <a href="subscribe.html">
+      <button class="subscribe-btn" id="subscribeButton">Subscribe ✨</button>
+    </a>
+    <p class="footer-bottom">© 2025 Wild Zoo. All rights reserved.</p>
+  </footer>
+  
+  
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+  
+</body>
+</html>

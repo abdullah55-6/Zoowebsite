@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zoo Animals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    nav {
+      background-color: #001f3f;
+      padding: 15px 20px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      color: white;
+      font-size: 24px;
+      font: weight bold;
+      ;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 100px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      background-color: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1f1717;
+     /* padding: 40px 40px;*/
+    }
+
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin: 40px 0;
+      font-size: 36px;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .animal-card {
+      background-color: #090909;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .animal-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .animal-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .animal-info {
+      padding: 20px;
+    }
+
+    .animal-info h3 {
+      color: #e67e22;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .animal-info p {
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .custom-footer {
+      background: rgba(110, 90, 90, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: white;
+      text-align: center;
+      margin-top: 90px;
+      padding: 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    /* Social Links */
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-socials a {
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-socials a:hover {
+      color: #00ffd0;
+    }
+
+    /* Subscribe Button */
+    .subscribe-btn {
+      background: linear-gradient(135deg, #00ffd0, #0088ff);
+      color: black;
+      font-weight: bold;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .subscribe-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #00ffd0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">ZooSite</div>
+
+      <div class="nav-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="animals.html">Animals</a>
+        <a href="planyourvisit.html">Plan Your Visit</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+    </div>
+  </nav>
+
+  <h1>Explore Our Amazing Animals</h1>
+
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <a href="loin.html">
+      <div class="animal-card">
+        <img src="pexels-charldurand-6436445.jpg" alt="Lion" />
+        <div class="animal-info">
+          <h3>Lion</h3>
+          <p>The lion is known as the king of the jungle...</p>
+        </div>
+      </div>
+    </a>
+    <!-- Card 2 -->
+    <a href="tiger.html">
+      <div class="animal-card">
+        <img src="kar-ming-moo-Q_3WmguWgYg-unsplash.jpg" alt="Tiger" />
+        <div class="animal-info">
+          <h3>Tiger</h3>
+          <p>Tigers are solitary and territorial big cats...</p>
+        </div>
+      </div>
+    </a>
+    <!-- Continue cards same as before... -->
+    <a href="penguin.html">
+      <div class="animal-card">
+        <img src="annie-spratt-4TMBk-LqEKo-unsplash.jpg" alt="Penguin" />
+        <div class="animal-info">
+          <h3>Penguin</h3>
+          <p>Penguins are flightless birds adapted to life in water...</p>
+        </div>
+      </div>
+    </a>
+    <a href="bear.html">
+      <div class="animal-card">
+        <img src="zdenek-machacek-hztya2tQqB8-unsplash.jpg" alt="Bear">
+        <div class="animal-info">
+          <h3>Bear</h3>
+          <p>Bears are large mammals found in forests and mountains. They are strong and can be omnivorous, eating both
+            plants and animals.</p>
+        </div>
+      </div>
+    </a>
+    <a href="flamingo.html">
+      <div class="animal-card">
+        <img src="dmytro-koplyk--Txuzl_kLvc-unsplash.jpg" alt="Flamingo">
+        <div class="animal-info">
+          <h3>Flamingo</h3>
+          <p>Flamingos are tall, pink wading birds known for their beautiful color and long legs. They live in lagoons
+            and lakes.</p>
+        </div>
+      </div>
+    </a>
+    <a href="rhinoceros.html">
+      <div class="animal-card">
+        <img src="candi-foltz-zwYO_0rnWv4-unsplash.jpg" alt="Rhinoceros">
+        <div class="animal-info">
+          <h3>Rhinoceros</h3>
+          <p>Rhinos are large herbivores known for their thick skin and horns. They are powerful and mostly solitary
+            animals found in Africa and Asia.</p>
+        </div>
+      </div>
+    </a>
+<a href="crocodile.html">
+    <div class="animal-card">
+      <img src="bart-van-griensven-_-2hCDbHtNQ-unsplash.jpg" alt="Crocodile">
+      <div class="animal-info">
+        <h3>Crocodile</h3>
+        <p>Crocodiles are large aquatic reptiles that live in rivers and lakes. They are powerful predators with strong
+          jaws.</p>
+      </div>
+    </div>
+</a>
+    <a href="owl.html">
+    <div class="animal-card">
+      <img src="sonder-quest-UTw183oZPf0-unsplash.jpg" alt="Owl">
+      <div class="animal-info">
+        <h3>Owl</h3>
+        <p>Owls are nocturnal birds known for their large eyes and silent flight. They are expert hunters, especially at
+          night.</p>
+      </div>
+    </div>
+</a>
+  </div>
+
+  <footer class="custom-footer">
+    <div class="footer-socials">
+      <a href="https://facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+    </div>
+
+    <a href="subscribe.html">
+      <button class="subscribe-btn" id="subscribeButton">Subscribe ✨</button>
+    </a>
+    <p class="footer-bottom">© 2025 Wild Zoo. All rights reserved.</p>
+  </footer>
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- JS for mobile nav toggle -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
